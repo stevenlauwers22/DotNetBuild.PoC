@@ -1,6 +1,5 @@
 /DotNetBuild.PoC/obj
 /DotNetBuild.PoC/bin
-/DotNetBuild.PoC.Build/bin
 /DotNetBuild.PoC.Build/obj
 /DotNetBuild.PoC.Tests/bin
 /DotNetBuild.PoC.Tests/obj
