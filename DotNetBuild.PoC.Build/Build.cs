@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using DotNetBuild.Core;
 using DotNetBuild.PoC.Build.Tasks;
 
@@ -9,7 +8,7 @@ namespace DotNetBuild.PoC.Build
     {
         public string Name
         {
-            get { return "Continuous integration target"; }
+            get { return "Build target"; }
         }
 
         public bool ContinueOnError
@@ -24,10 +23,9 @@ namespace DotNetBuild.PoC.Build
 
         public bool Execute(IConfigurationSettings configurationSettings)
         {
-            var baseDir = ".";// configurationSettings.Get<string>("baseDir");
             var msBuildTask = new MsBuildTask
             {
-                Project = Path.Combine(baseDir, "DotNetBuild.Poc.sln"),
+                Project = @".\DotNetBuild.Poc.sln",
                 Target = "Rebuild",
                 Parameters = "Configuration=Debug"
             };

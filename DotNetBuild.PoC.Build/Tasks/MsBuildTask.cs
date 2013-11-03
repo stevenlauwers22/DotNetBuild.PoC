@@ -24,7 +24,7 @@ namespace DotNetBuild.PoC.Build.Tasks
                     UseShellExecute = false
                 }
             };
-
+            
             process.Start();
             process.WaitForExit();
 

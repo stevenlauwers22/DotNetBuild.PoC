@@ -41,6 +41,11 @@
   <ItemGroup>
     <Compile Include="Build.cs" />
     <Compile Include="CI.cs" />
+    <Compile Include="Configuration\AcceptanceConfiguration.cs" />
+    <Compile Include="Configuration\DevelopmentConfiguration.cs" />
+    <Compile Include="Configuration\_ConfigurationRegistry.cs" />
+    <Compile Include="Configuration\ProductionConfiguration.cs" />
+    <Compile Include="Configuration\TestConfiguration.cs" />
     <Compile Include="Tasks\MsBuildTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RunTests.cs" />

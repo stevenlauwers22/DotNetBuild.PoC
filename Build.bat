@@ -1,0 +1,2 @@
+packages\DotNetBuild\DotNetBuild.Runner.CommandLine.exe start-build -assembly:c:\Projects\DotNetBuild\DotNetBuild.PoC\DotNetBuild.PoC.Build\bin\Debug\DotNetBuild.PoC.Build.dll -target:CI -configuration:Development -baseDir:C:\Projects\DotNetBuild\DotNetBuild.PoC
+pause

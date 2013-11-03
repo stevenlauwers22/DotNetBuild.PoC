@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DotNetBuild.Core;
 
 namespace DotNetBuild.PoC.Build
@@ -29,6 +30,9 @@ namespace DotNetBuild.PoC.Build
 
         public bool Execute(IConfigurationSettings configurationSettings)
         {
+            var connectionString = configurationSettings.Get<string>("ConnectionString");
+            Console.WriteLine(connectionString);
+
             return true;
         }
     }
