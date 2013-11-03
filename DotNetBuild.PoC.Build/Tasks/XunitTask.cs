@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Specialized;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -18,9 +19,19 @@ namespace DotNetBuild.PoC.Build.Tasks
                 {
                     FileName = GetXunitExe(),
                     Arguments = GetXunitParameters(),
-                    UseShellExecute = false
+                    UseShellExecute = false,
+                    CreateNoWindow = true
                 }
             };
+
+            var environmentVariables = Environment.GetEnvironmentVariables();
+            foreach (string environmentVariableKey in environmentVariables.Keys)
+            {
+                if (process.StartInfo.EnvironmentVariables.ContainsKey(environmentVariableKey))
+                    continue;
+
+                process.StartInfo.EnvironmentVariables.Add(environmentVariableKey, environmentVariables[environmentVariableKey].ToString());
+            }
 
             process.Start();
             process.WaitForExit();

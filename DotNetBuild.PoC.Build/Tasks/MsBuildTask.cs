@@ -21,9 +21,19 @@ namespace DotNetBuild.PoC.Build.Tasks
                 {
                     FileName = GetMsBuildExe(),
                     Arguments = GetMsBuildParameters(),
-                    UseShellExecute = false
+                    UseShellExecute = false,
+                    CreateNoWindow = true
                 }
             };
+
+            var environmentVariables = Environment.GetEnvironmentVariables();
+            foreach (string environmentVariableKey in environmentVariables.Keys)
+            {
+                if (process.StartInfo.EnvironmentVariables.ContainsKey(environmentVariableKey))
+                    continue;
+
+                process.StartInfo.EnvironmentVariables.Add(environmentVariableKey, environmentVariables[environmentVariableKey].ToString());
+            }
             
             process.Start();
             process.WaitForExit();
