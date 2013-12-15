@@ -35,6 +35,9 @@
     <Reference Include="DotNetBuild.Core">
       <HintPath>..\packages\DotNetBuild\DotNetBuild.Core.dll</HintPath>
     </Reference>
+    <Reference Include="DotNetBuild.Tasks">
+      <HintPath>..\packages\DotNetBuild\DotNetBuild.Tasks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
@@ -46,10 +49,8 @@
     <Compile Include="Configuration\_ConfigurationRegistry.cs" />
     <Compile Include="Configuration\ProductionConfiguration.cs" />
     <Compile Include="Configuration\TestConfiguration.cs" />
-    <Compile Include="Tasks\MsBuildTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RunTests.cs" />
-    <Compile Include="Tasks\XunitTask.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using DotNetBuild.Core;
-using DotNetBuild.PoC.Build.Tasks;
+using DotNetBuild.Tasks;
 
 namespace DotNetBuild.PoC.Build
 {
