@@ -8,7 +8,7 @@ namespace DotNetBuild.PoC.Tests
         [Fact]
         public void Randomly_fails()
         {
-            Assert.True((DateTime.Now.Second%2) > 0);
+            Assert.True((DateTime.Now.Second % 2) > 0);
         }
     }
 }
