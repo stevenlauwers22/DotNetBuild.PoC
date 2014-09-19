@@ -32,13 +32,13 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetBuild.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="DotNetBuild.Core, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\DotNetBuild.Core.1.0.0\lib\net45\DotNetBuild.Core.dll</HintPath>
+      <HintPath>..\packages\DotNetBuild.Core.1.1.0\lib\net45\DotNetBuild.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetBuild.Tasks, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="DotNetBuild.Tasks, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\DotNetBuild.Tasks.1.0.0\lib\net45\DotNetBuild.Tasks.dll</HintPath>
+      <HintPath>..\packages\DotNetBuild.Tasks.1.1.0\lib\net45\DotNetBuild.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
